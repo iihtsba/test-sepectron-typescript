@@ -50,7 +50,23 @@ describe("Initial test suite", () => {
 
   });
 
-  it("Display Check", async () => {
+  it.only('Check Size', async () => {
+    
+    const str = "abcdefgh";
+    //await pages.initialPage.setTextAreaContent("#tid",str);
+
+     console.log('string:'+str);
+
+     await pages.initialPage.clickBtn("#bid");
+
+     const len = await pages.initialPage.getTextAreaContent("#txtid");
+
+     console.log('length:'+len);
+
+     expect(len).to.equals(str.length+'');
+  });
+
+  it.only("Display Check", async () => {
 
     const wCnt = await pages.initialPage.getWindowCnt();
 

@@ -90,4 +90,15 @@ export class Helpers {
     return await this.app.client.isExisting(element);
   }
 
+  public async getTextAreaContent(selector: string){
+    return await this.app.client.getValue(selector);
+  }
+
+  public async setTextAreaContent(selector: string, content: string){
+    return await this.app.client.setValue(selector, content);
+  }
+
+  public async clickBtn(selector: string){
+    this.app.client.click(selector);  
+  }
 }
