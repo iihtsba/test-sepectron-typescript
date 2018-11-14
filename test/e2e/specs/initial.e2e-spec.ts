@@ -52,8 +52,8 @@ describe("Initial test suite", () => {
 
   it.only('Check Size', async () => {
     
-    const str = "abcdefgh";
-    //await pages.initialPage.setTextAreaContent("#tid",str);
+    const str = "abcdekighkiugiiugiugfgh";
+      await pages.initialPage.setTextAreaContent("#tid",str);
 
      console.log('string:'+str);
 
@@ -63,10 +63,11 @@ describe("Initial test suite", () => {
 
      console.log('length:'+len);
 
-     expect(len).to.equals(str.length+'');
+     expect(Number(len)).to.equals(str.length);
   });
 
-  it.only("Display Check", async () => {
+  /*
+  it.("Display Check", async () => {
 
     const wCnt = await pages.initialPage.getWindowCnt();
 
@@ -82,6 +83,5 @@ describe("Initial test suite", () => {
 
     // expect(actualHeader).to.equals("Hello World!");
 
-  });
-
+  }); */
 });
